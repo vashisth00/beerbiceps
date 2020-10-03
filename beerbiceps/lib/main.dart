@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/dashboard/login.dart';
+import 'screens/home/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                             padding: EdgeInsets.symmetric(
                                 horizontal: 32, vertical: 16),
-                            child: LoginOption()),
+                            child: login ? Login() : LoginOption()),
                       ),
                     ),
                   ),
