@@ -12,7 +12,8 @@ void main() {
   ValueNotifier<GraphQLClient> client = ValueNotifier(
     GraphQLClient(
       cache: InMemoryCache(),
-      link: link,
+      // link: link,
+      link: httpLink,
     ),
   );
 }
