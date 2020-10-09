@@ -1,3 +1,4 @@
+import 'package:beerbiceps/screens/blog/grid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -9,7 +10,7 @@ class SignUp extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          "Sign up with",
+          "Just Go Visit",
           style: TextStyle(
             fontSize: 16,
             color: Color(0xFFF3D657),
@@ -27,53 +28,7 @@ class SignUp extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 16,
-        ),
-        TextField(
-          decoration: InputDecoration(
-            hintText: 'Enter Email / Username',
-            hintStyle: TextStyle(
-              fontSize: 16,
-              color: Color(0xFF3F3C31),
-              fontWeight: FontWeight.bold,
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(25),
-              borderSide: BorderSide(
-                width: 0,
-                style: BorderStyle.none,
-              ),
-            ),
-            filled: true,
-            fillColor: Colors.grey.withOpacity(0.1),
-            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
-          ),
-        ),
-        SizedBox(
-          height: 16,
-        ),
-        TextField(
-          decoration: InputDecoration(
-            hintText: 'Password',
-            hintStyle: TextStyle(
-              fontSize: 16,
-              color: Color(0xFF3F3C31),
-              fontWeight: FontWeight.bold,
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(25),
-              borderSide: BorderSide(
-                width: 0,
-                style: BorderStyle.none,
-              ),
-            ),
-            filled: true,
-            fillColor: Colors.grey.withOpacity(0.1),
-            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
-          ),
-        ),
-        SizedBox(
-          height: 24,
+          height: 20,
         ),
         Container(
           height: 40,
@@ -91,13 +46,21 @@ class SignUp extends StatelessWidget {
               ),
             ],
           ),
-          child: Center(
-            child: Text(
-              "SIGN UP",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1C1C1C),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => bbGrid()),
+              );
+            },
+            child: Center(
+              child: Text(
+                "View Blogs",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF1C1C1C),
+                ),
               ),
             ),
           ),
@@ -106,7 +69,7 @@ class SignUp extends StatelessWidget {
           height: 24,
         ),
         Text(
-          "Or Signup with",
+          "Follow us on",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 16,

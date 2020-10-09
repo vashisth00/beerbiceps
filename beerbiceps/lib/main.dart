@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Beerbiceps App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         // textTheme: GoogleFonts.muktaVaaniTextTheme(),
       ),
