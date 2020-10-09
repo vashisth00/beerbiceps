@@ -1,3 +1,5 @@
+import 'package:beerbiceps/screens/home/signup.dart';
+import 'package:beerbiceps/screens/home/signup_option.dart';
 import 'package:flutter/material.dart';
 import 'screens/dashboard/login.dart';
 import 'screens/home/login.dart';
@@ -58,9 +60,10 @@ class _HomePageState extends State<HomePage> {
                     child: Center(
                       child: SingleChildScrollView(
                         child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 32, vertical: 16),
-                            child: login ? Login() : LoginOption()),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 32, vertical: 16),
+                          child: login ? Login() : LoginOption(),
+                        ),
                       ),
                     ),
                   ),
@@ -87,6 +90,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: EdgeInsets.symmetric(
                               horizontal: 32, vertical: 16),
+                          child: !login ? SignUp() : SignUpOption(),
                         ),
                       ),
                     )),
