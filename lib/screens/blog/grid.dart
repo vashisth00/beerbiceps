@@ -1,4 +1,4 @@
-import 'package:beerbiceps/screens/dashboard/list.dart';
+import 'package:beerbiceps/constants/db.dart';
 import 'package:flutter/material.dart';
 
 class BlogsGrid extends StatelessWidget {
@@ -22,7 +22,7 @@ class BlogsGrid extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => BlogList()));
+                  context, MaterialPageRoute(builder: (context) => Database()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
