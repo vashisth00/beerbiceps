@@ -50,7 +50,7 @@ class SignUp extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => bbGrid()),
+                MaterialPageRoute(builder: (context) => BlogsGrid()),
               );
             },
             child: Center(
