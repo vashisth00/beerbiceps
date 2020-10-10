@@ -1,3 +1,4 @@
+import 'package:beerbiceps/screens/dashboard/return.dart';
 import 'package:flutter/material.dart';
 
 class bbGrid extends StatelessWidget {
@@ -17,14 +18,20 @@ class bbGrid extends StatelessWidget {
         // Generate 100 Widgets that display their index in the List
         children: List.generate(100, (index) {
           return Center(
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey, width: 3.0),
-              ),
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                'Item $index',
-                style: Theme.of(context).textTheme.headline5,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => RoutesExample()));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey, width: 3.0),
+                ),
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  'Item $index',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
               ),
             ),
           );
