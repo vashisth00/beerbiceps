@@ -254,7 +254,7 @@
 		</data>
 		<key>Frameworks/connectivity.framework/connectivity</key>
 		<data>
-		G4EON2UTk2mHNQ8evxr8R8P9OLQ=
+		QJJUtMTz+bWp0GxnVIZ6Jp7l8zw=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -322,7 +322,7 @@
 		</data>
 		<key>Frameworks/path_provider.framework/path_provider</key>
 		<data>
-		0jhtJ33op4GE2HuUdIOC8nSMuQQ=
+		6gFxI4syHZXX3Bvq3JM+4yON8ec=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -1021,11 +1021,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			G4EON2UTk2mHNQ8evxr8R8P9OLQ=
+			QJJUtMTz+bWp0GxnVIZ6Jp7l8zw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q13WeO82j2nICkfxKt0JJEBxdIoJjydH1536Xi/A0DI=
+			gvmSdkk4O+W9n/5Hr6S+HwnSf2FZ9q+tqBjwl8UZyWI=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
@@ -1208,11 +1208,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0jhtJ33op4GE2HuUdIOC8nSMuQQ=
+			6gFxI4syHZXX3Bvq3JM+4yON8ec=
 			</data>
 			<key>hash2</key>
 			<data>
-			IUshh9/Jmajkkw6lLwUnCMPEbKjFki4x/PTIYvq3Cfs=
+			4zMj3lKWnt340/tkGG8Abv/NSUma89dNp+qTwnt0VfU=
 			</data>
 		</dict>
 	</dict>

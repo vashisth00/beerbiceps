@@ -7,28 +7,7 @@ class BlogList extends StatefulWidget {
 }
 
 String readRepositories = """
-  query ReadRepositories(\$nRepositories: Int!) {
-    viewer {
-      repositories(last: \$nRepositories) {
-        nodes {
-          id
-          name
-          viewerHasStarred
-        }
-      }
-    }
-  }
-""";
-
-class _BlogListState extends State<BlogList> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      // Fetch last 30 posts
-      // ignore: deprecated_member_use
-      body: Query(options: QueryOptions(document: r'''
-          query MyQuery {
+    query MyQuery {
             posts(last: 30) {
               edges {
                node {
@@ -39,7 +18,18 @@ class _BlogListState extends State<BlogList> {
               }
            }
           }
-      '''), builder: (null)),
+""";
+
+class _BlogListState extends State<BlogList> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      // Fetch last 30 posts
+      // ignore: deprecated_member_use
+      body: Query(
+          options: QueryOptions(documentNode: gql(readRepositories)),
+          builder: (null)),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
         onPressed: null,
