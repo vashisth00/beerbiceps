@@ -26,7 +26,7 @@ class Login extends StatelessWidget {
           ),
         ),
         Text(
-          "Please login to continue",
+          "Please login to Write",
           style: TextStyle(
             fontSize: 16,
             color: Color(0xFF1C1C1C),

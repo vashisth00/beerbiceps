@@ -19,6 +19,17 @@ String readRepositories = """
            }
           }
 """;
+String basicPosts = """
+query Posts {
+  posts {
+    nodes {
+      authorId
+      title
+    }
+  }
+}
+
+""";
 
 class _BlogListState extends State<BlogList> {
   @override
@@ -36,28 +47,32 @@ class ListStyle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      // Fetch last 30 posts
-      // ignore: deprecated_member_use
       body: Query(
-          options: QueryOptions(documentNode: gql(readRepositories)),
-          // ignore: missing_return
+          options: QueryOptions(documentNode: gql(basicPosts)),
           builder: (QueryResult result,
               {VoidCallback refetch, FetchMore fetchMore}) {
             if (result.hasException) {
               return Text(result.exception.toString());
             }
-
             if (result.loading) {
               return Text('Loading');
             }
-            print(result.data.['posts']);
-            List repositories = result.data['posts']['edges']['node'];
-
+            print(result.data['posts']['nodes']);
             return ListView.builder(
-                itemCount: 3,
+                itemCount: result.data['posts']['nodes'].length,
                 itemBuilder: (context, index) {
-                  final repository = repositories[index];
-                  return Text(repository['title']);
+                  return Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: Column(
+                          children: [
+                            Text(result.data['posts']['nodes'][index]['title'])
+                          ],
+                        ),
+                      ),
+                    ],
+                  );
                 });
           }),
       backgroundColor: Colors.white,
