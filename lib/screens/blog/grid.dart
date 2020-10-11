@@ -1,4 +1,4 @@
-import 'package:beerbiceps/constants/db.dart';
+import 'package:beerbiceps/screens/dashboard/list.dart';
 import 'package:beerbiceps/screens/elements/boards.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class BlogsGrid extends StatelessWidget {
         children: <Widget>[
           Boards(
             title: 'All Blogs',
-            route: Database(),
+            route: BlogList(),
           ),
           Boards(
             route: BlogsGrid(),
