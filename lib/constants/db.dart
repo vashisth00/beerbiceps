@@ -1,4 +1,3 @@
-import 'package:beerbiceps/main.dart';
 import 'package:beerbiceps/screens/dashboard/list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
@@ -19,7 +18,7 @@ class Database extends StatelessWidget {
 
     return GraphQLProvider(
       client: dtb,
-      child: MyApp(),
+      child: ListStyle(),
     );
   }
 }
