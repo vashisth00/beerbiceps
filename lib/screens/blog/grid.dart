@@ -18,40 +18,17 @@ class BlogsGrid extends StatelessWidget {
         mainAxisSpacing: 10,
         crossAxisCount: 2,
         children: <Widget>[
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Database()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              child: const Text("Check Basic Blogs"),
-              color: Colors.teal[100],
-            ),
+          Boards(
+            title: 'All Blogs',
+            route: Database(),
           ),
           Boards(
             route: BlogsGrid(),
             title: 'Vashisth',
           ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text('Sound of screams but the'),
-            color: Colors.teal[300],
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text('Who scream'),
-            color: Colors.teal[400],
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text('Revolution is coming...'),
-            color: Colors.teal[500],
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text('Revolution, they...'),
-            color: Colors.teal[600],
+          Boards(
+            title: 'Coming Soon',
+            route: BlogsGrid(),
           ),
         ],
       ),
