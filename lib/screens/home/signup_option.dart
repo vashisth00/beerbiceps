@@ -38,7 +38,7 @@ class SignUpOption extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              "SIGN UP",
+              "Skip to Blogs",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
