@@ -1,4 +1,5 @@
 import 'package:beerbiceps/constants/db.dart';
+import 'package:beerbiceps/screens/elements/boards.dart';
 import 'package:flutter/material.dart';
 
 class BlogsGrid extends StatelessWidget {
@@ -9,8 +10,6 @@ class BlogsGrid extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        bottomOpacity: 0.2,
-        toolbarOpacity: 0.4,
       ),
       body: GridView.count(
         primary: false,
@@ -30,10 +29,9 @@ class BlogsGrid extends StatelessWidget {
               color: Colors.teal[100],
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text('Heed not the rabble'),
-            color: Colors.teal[200],
+          Boards(
+            route: BlogsGrid(),
+            title: 'Vashisth',
           ),
           Container(
             padding: const EdgeInsets.all(8),
