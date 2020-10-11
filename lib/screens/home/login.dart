@@ -1,3 +1,4 @@
+import 'package:beerbiceps/screens/dashboard/writers.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -80,29 +81,35 @@ class Login extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
-        Container(
-          height: 40,
-          decoration: BoxDecoration(
-            color: Color(0xFF1C1C1C),
-            borderRadius: BorderRadius.all(
-              Radius.circular(25),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0xFF1C1C1C).withOpacity(0.5),
-                spreadRadius: 3,
-                blurRadius: 4,
-                offset: Offset(0, 3),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Profile()));
+          },
+          child: Container(
+            height: 40,
+            decoration: BoxDecoration(
+              color: Color(0xFF1C1C1C),
+              borderRadius: BorderRadius.all(
+                Radius.circular(25),
               ),
-            ],
-          ),
-          child: Center(
-            child: Text(
-              "LOGIN",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.amber,
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xFF1C1C1C).withOpacity(0.5),
+                  spreadRadius: 3,
+                  blurRadius: 4,
+                  offset: Offset(0, 3),
+                ),
+              ],
+            ),
+            child: Center(
+              child: Text(
+                "LOGIN",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.amber,
+                ),
               ),
             ),
           ),
