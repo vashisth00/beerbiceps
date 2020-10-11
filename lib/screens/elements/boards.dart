@@ -30,7 +30,10 @@ class Boards extends StatelessWidget {
           ],
         ),
         padding: const EdgeInsets.all(8),
-        child: Text(title),
+        child: Text(
+          title,
+          style: TextStyle(fontSize: 18),
+        ),
       ),
     );
   }
