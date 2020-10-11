@@ -41,7 +41,7 @@ class Login extends StatelessWidget {
             hintText: 'Email / Username',
             hintStyle: TextStyle(
               fontSize: 16,
-              color: Color(0xFFD9BC43),
+              color: Colors.white38,
               fontWeight: FontWeight.bold,
             ),
             border: OutlineInputBorder(
@@ -52,7 +52,6 @@ class Login extends StatelessWidget {
               ),
             ),
             filled: true,
-            fillColor: Color(0xFFECCB45),
             contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
           ),
         ),
@@ -64,7 +63,7 @@ class Login extends StatelessWidget {
             hintText: 'Password',
             hintStyle: TextStyle(
               fontSize: 16,
-              color: Color(0xFFD9BC43),
+              color: Colors.white38,
               fontWeight: FontWeight.bold,
             ),
             border: OutlineInputBorder(
@@ -75,7 +74,6 @@ class Login extends StatelessWidget {
               ),
             ),
             filled: true,
-            fillColor: Color(0xFFECCB45),
             contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
           ),
         ),
@@ -91,7 +89,7 @@ class Login extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: Color(0xFF1C1C1C).withOpacity(0.2),
+                color: Color(0xFF1C1C1C).withOpacity(0.5),
                 spreadRadius: 3,
                 blurRadius: 4,
                 offset: Offset(0, 3),
@@ -104,7 +102,7 @@ class Login extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFF3D657),
+                color: Colors.amber,
               ),
             ),
           ),

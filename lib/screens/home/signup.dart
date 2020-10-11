@@ -13,7 +13,7 @@ class SignUp extends StatelessWidget {
           "Just Go Visit",
           style: TextStyle(
             fontSize: 16,
-            color: Color(0xFFF3D657),
+            color: Colors.amber,
             height: 2,
           ),
         ),
@@ -22,7 +22,7 @@ class SignUp extends StatelessWidget {
           style: TextStyle(
             fontSize: 36,
             fontWeight: FontWeight.bold,
-            color: Color(0xFFF3D657),
+            color: Colors.amber,
             letterSpacing: 2,
             height: 1,
           ),
@@ -33,13 +33,13 @@ class SignUp extends StatelessWidget {
         Container(
           height: 40,
           decoration: BoxDecoration(
-            color: Color(0xFFF3D657),
+            color: Colors.amber,
             borderRadius: BorderRadius.all(
               Radius.circular(25),
             ),
             boxShadow: [
               BoxShadow(
-                color: Color(0xFFF3D657).withOpacity(0.2),
+                color: Colors.amber.withOpacity(0.2),
                 spreadRadius: 3,
                 blurRadius: 4,
                 offset: Offset(0, 3),
@@ -73,7 +73,7 @@ class SignUp extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 16,
-            color: Color(0xFFF3D657),
+            color: Colors.amber,
             height: 1,
           ),
         ),
@@ -86,7 +86,7 @@ class SignUp extends StatelessWidget {
             Icon(
               Entypo.facebook_with_circle,
               size: 32,
-              color: Color(0xFFF3D657),
+              color: Colors.amber,
             ),
             SizedBox(
               width: 24,
@@ -94,7 +94,7 @@ class SignUp extends StatelessWidget {
             Icon(
               Entypo.google__with_circle,
               size: 32,
-              color: Color(0xFFF3D657),
+              color: Colors.amber,
             ),
           ],
         )

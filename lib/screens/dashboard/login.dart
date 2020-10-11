@@ -38,7 +38,7 @@ class LoginOption extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFF3D657),
+                color: Colors.amber,
               ),
             ),
           ),
