@@ -1,6 +1,7 @@
 import 'package:beerbiceps/screens/home/signup.dart';
 import 'package:beerbiceps/screens/home/signup_option.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/dashboard/login.dart';
 import 'screens/home/login.dart';
 
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Beerbiceps App',
       theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ),
         primarySwatch: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         // textTheme: GoogleFonts.muktaVaaniTextTheme(),

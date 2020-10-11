@@ -1,4 +1,5 @@
 import 'package:beerbiceps/constants/db.dart';
+import 'package:beerbiceps/screens/dashboard/list.dart';
 import 'package:beerbiceps/screens/elements/boards.dart';
 import 'package:flutter/material.dart';
 
