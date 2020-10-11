@@ -20,6 +20,22 @@ class Profile extends StatelessWidget {
               ),
             ),
             Container(
+              height: 250.0,
+              decoration: BoxDecoration(
+                  color: Colors.amber,
+                  gradient: LinearGradient(
+                      begin: FractionalOffset.topCenter,
+                      end: FractionalOffset.bottomCenter,
+                      colors: [
+                        Colors.amber.withOpacity(0.0),
+                        Colors.yellow[900],
+                      ],
+                      stops: [
+                        0.0,
+                        1.0
+                      ])),
+            ),
+            Container(
               margin: EdgeInsets.fromLTRB(16.0, 200.0, 16.0, 16.0),
               child: Column(
                 children: <Widget>[
@@ -40,12 +56,12 @@ class Profile extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    "Little Butterfly",
+                                    "Neha Mehra",
                                     style: Theme.of(context).textTheme.title,
                                   ),
                                   ListTile(
                                     contentPadding: EdgeInsets.all(0),
-                                    title: Text("Product Designer"),
+                                    title: Text("Content Writer"),
                                     subtitle: Text("Kathmandu"),
                                   ),
                                 ],
@@ -58,7 +74,7 @@ class Profile extends StatelessWidget {
                                   child: Column(
                                     children: <Widget>[
                                       Text("285"),
-                                      Text("Likes")
+                                      Icon(Icons.favorite)
                                     ],
                                   ),
                                 ),
@@ -66,7 +82,7 @@ class Profile extends StatelessWidget {
                                   child: Column(
                                     children: <Widget>[
                                       Text("3025"),
-                                      Text("Comments")
+                                      Icon(Icons.chat_bubble)
                                     ],
                                   ),
                                 ),
@@ -74,7 +90,7 @@ class Profile extends StatelessWidget {
                                   child: Column(
                                     children: <Widget>[
                                       Text("650"),
-                                      Text("Favourites")
+                                      Icon(Icons.article)
                                     ],
                                   ),
                                 ),
@@ -105,12 +121,12 @@ class Profile extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         ListTile(
-                          title: Text("User information"),
+                          title: Text("Author information"),
                         ),
                         Divider(),
                         ListTile(
                           title: Text("Email"),
-                          subtitle: Text("butterfly.little@gmail.com"),
+                          subtitle: Text("neha.mehra097@gmail.com"),
                           leading: Icon(Icons.email),
                         ),
                         ListTile(
@@ -120,7 +136,7 @@ class Profile extends StatelessWidget {
                         ),
                         ListTile(
                           title: Text("Website"),
-                          subtitle: Text("https://www.littlebutterfly.com"),
+                          subtitle: Text("https://www.beerbiceps.com"),
                           leading: Icon(Icons.web),
                         ),
                         ListTile(
