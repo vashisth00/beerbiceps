@@ -80,19 +80,25 @@ class ListStyle extends StatelessWidget {
                     'https://beerbiceps2.adesignguy.co/wp-content/uploads/2020/09/0M-Recovered-1-1.gif');
               }
               print(result.data['posts']['nodes']);
-              print(result.data['posts']['nodes'][0]['author']['node']
-                  ['firstName']);
+              print("whatttt " +
+                  result.data['posts']['nodes'][0]['author']['node']
+                      ['firstName']);
               return ListView.builder(
                   itemCount: result.data['posts']['nodes'].length,
                   itemBuilder: (context, index) {
+                    print("LOL " +
+                        result.data['posts']['nodes'][index].toString());
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => FullData(
-                                todo: result.data['posts']['nodes'][index]),
-                          ),
+                              builder: (context) => FullData(),
+                              settings: RouteSettings(
+                                  arguments: result.data['posts']['nodes']
+                                          [index]
+                                      .toString())),
+                          //result.data['posts']['nodes'][index]
                         );
                       },
                       child: Padding(

@@ -57,6 +57,7 @@ class Profile extends StatelessWidget {
                                 children: <Widget>[
                                   Text(
                                     "Neha Mehra",
+                                    // ignore: deprecated_member_use
                                     style: Theme.of(context).textTheme.title,
                                   ),
                                   ListTile(
