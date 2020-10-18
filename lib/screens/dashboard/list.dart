@@ -1,4 +1,5 @@
 import 'package:beerbiceps/constants/db.dart';
+import 'package:beerbiceps/models/getblogs.dart';
 import 'package:beerbiceps/queries/query/blogsdata.dart';
 import 'package:beerbiceps/screens/blog/favourite.dart';
 import 'package:beerbiceps/screens/dashboard/info.dart';
@@ -42,13 +43,14 @@ class ListStyle extends StatelessWidget {
               print("whatttt " +
                   result.data['posts']['nodes'][0]['author']['node']
                       ['firstName']);
-              List repositories = result.data['posts']['nodes'];
+              List repo = result.data['posts']['nodes'];
               return ListView.builder(
-                  itemCount: repositories.length,
+                  itemCount: repo.length,
                   itemBuilder: (context, index) {
-                    var data = Node.fromJson(repositories[index]);
-                    print("LOL " +
-                        result.data['posts']['nodes'][index].toString());
+                    print(result.data['posts']['nodes'].length);
+
+                    var data = NodeElement.fromJson(repo[index]);
+                    //print(data.title);
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -56,9 +58,7 @@ class ListStyle extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => FullData(),
                               settings: RouteSettings(
-                                  arguments: result.data['posts']['nodes']
-                                          [index]
-                                      .toString())),
+                                  arguments: repo[index].toString())),
                         );
                       },
                       child: Padding(
@@ -87,8 +87,7 @@ class ListStyle extends StatelessWidget {
                                 ),
                                 child: Column(
                                   children: [
-                                    Text(result.data['posts']['nodes'][index]
-                                        ['title']),
+                                    Text(data.title),
                                     SizedBox(height: 10),
                                     Container(
                                       margin: EdgeInsets.only(bottom: 10),

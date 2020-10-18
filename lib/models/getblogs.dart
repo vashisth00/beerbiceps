@@ -156,11 +156,11 @@ class AuthorNode {
         username: json["username"],
         description: json["description"],
         capKey: json["capKey"],
-        capabilities: List<String>.from(json["capabilities"].map((x) => x)),
+        // capabilities: List<String>.from(json["capabilities"].map((x) => x)),
         email: json["email"],
         firstName: json["firstName"],
-        extraCapabilities:
-            List<String>.from(json["extraCapabilities"].map((x) => x)),
+        // extraCapabilities:
+        //     List<String>.from(json["extraCapabilities"].map((x) => x)),
         id: json["id"],
       );
 
@@ -170,11 +170,11 @@ class AuthorNode {
         "username": username,
         "description": description,
         "capKey": capKey,
-        "capabilities": List<dynamic>.from(capabilities.map((x) => x)),
+        //"capabilities": List<dynamic>.from(capabilities.map((x) => x)),
         "email": email,
         "firstName": firstName,
-        "extraCapabilities":
-            List<dynamic>.from(extraCapabilities.map((x) => x)),
+        // "extraCapabilities":
+        //     List<dynamic>.from(extraCapabilities.map((x) => x)),
         "id": id,
       };
 }
