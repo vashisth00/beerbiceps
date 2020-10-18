@@ -27,7 +27,9 @@ class ListStyle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("All Blogs"),
+      ),
       body: Database.instance.graphQLProvider(
         child: Query(
             options: QueryOptions(documentNode: gql(allData)),
@@ -40,7 +42,7 @@ class ListStyle extends StatelessWidget {
                 return Image.network(
                     'https://beerbiceps2.adesignguy.co/wp-content/uploads/2020/09/0M-Recovered-1-1.gif');
               }
-              List repo = result.data['posts']['nodes'];
+              final List repo = result.data['posts']['nodes'];
               return ListView.builder(
                   itemCount: repo.length,
                   itemBuilder: (context, index) {
@@ -51,6 +53,7 @@ class ListStyle extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) => FullData(),
+                              // - Might need this later -
                               settings: RouteSettings(arguments: data)),
                         );
                       },
@@ -63,7 +66,7 @@ class ListStyle extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => FavouritePage()));
+              MaterialPageRoute(builder: (context) => FavouriteMarker()));
         },
         child: Icon(Icons.favorite),
       ),

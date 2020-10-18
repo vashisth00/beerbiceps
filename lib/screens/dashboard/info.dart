@@ -1,47 +1,29 @@
-import 'package:beerbiceps/constants/db.dart';
-import 'package:beerbiceps/queries/query/blogsdata.dart';
 import 'package:flutter/material.dart';
-import 'package:graphql_flutter/graphql_flutter.dart';
 
 class FullData extends StatelessWidget {
+  final FullData todo;
+
+  // In the constructor, require a Todo.
+  FullData({Key key, @required this.todo}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final String mydata = ModalRoute.of(context).settings.arguments;
-    // final welcome = welcomeFromJson(jsonDecode(source));
-    //final String ee = mydata.startsWith('authorId', 1) as String;
-    //final alljson = jsonDecode(mydata);
-
-    // Map<String, dynamic> toJson() => {
-    //   dynamic jsonDecode(String source, {Object Function(Object, Object) reviver})
-
-    // };
-
+    final String mydata = ModalRoute.of(context).settings.arguments.toString();
+    print(todo);
     return Scaffold(
-        appBar: AppBar(
-          title: Text(mydata),
+      appBar: AppBar(
+        title: Text("Variable"),
+      ),
+      body: Column(children: [
+        Container(
+          padding: EdgeInsets.all(10),
+          child: Text(mydata),
         ),
-        body: Database.instance.graphQLProvider(
-            child: Query(
-                options: QueryOptions(documentNode: gql(allData)),
-                builder: (QueryResult result,
-                    {VoidCallback refetch, FetchMore fetchMore}) {
-                  if (result.hasException) {
-                    return Text(result.exception.toString());
-                  }
-                  if (result.loading) {
-                    return Image.network(
-                        'https://beerbiceps2.adesignguy.co/wp-content/uploads/2020/09/0M-Recovered-1-1.gif');
-                  }
-                  return ListView(children: [
-                    Row(children: [
-                      // Text(mydata),
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        child: Text(mydata),
-                      ),
-                    ]),
-                  ]);
-                })));
+        Container(
+          padding: EdgeInsets.all(10),
+          child: Text(todo.toString()),
+        ),
+      ]),
+    );
   }
 }
 
