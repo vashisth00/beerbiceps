@@ -33,6 +33,40 @@ query MyQuery {
 
 ''';
 
+String allData = '''
+query BlogsData {
+  posts {
+    nodes {
+      title
+      date
+      pingStatus
+      commentCount
+      isPreview
+      content
+      author {
+        node {
+          nicename
+          nickname
+          username
+          description
+          capKey
+          capabilities
+          email
+          firstName
+          extraCapabilities
+          id
+        }
+      }
+      id
+      slug
+      uri
+      status
+    }
+  }
+}
+
+''';
+
 String readRepositories = """
     query MyQuery {
             posts(last: 30) {

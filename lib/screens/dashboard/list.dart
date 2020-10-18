@@ -1,8 +1,10 @@
 import 'package:beerbiceps/constants/db.dart';
 import 'package:beerbiceps/queries/query/blogsdata.dart';
+import 'package:beerbiceps/screens/blog/favourite.dart';
 import 'package:beerbiceps/screens/dashboard/info.dart';
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'dart:convert';
 
 class BlogList extends StatefulWidget {
   @override
@@ -27,7 +29,7 @@ class ListStyle extends StatelessWidget {
       appBar: AppBar(),
       body: Database.instance.graphQLProvider(
         child: Query(
-            options: QueryOptions(documentNode: gql(withAuthors)),
+            options: QueryOptions(documentNode: gql(allData)),
             builder: (QueryResult result,
                 {VoidCallback refetch, FetchMore fetchMore}) {
               if (result.hasException) {
@@ -112,7 +114,10 @@ class ListStyle extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
-        onPressed: null,
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => FavouritePage()));
+        },
         child: Icon(Icons.favorite),
       ),
     );
