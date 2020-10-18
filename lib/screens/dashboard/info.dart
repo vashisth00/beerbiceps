@@ -1,9 +1,7 @@
 import 'package:beerbiceps/constants/db.dart';
-import 'package:beerbiceps/models/getblogs.dart';
 import 'package:beerbiceps/queries/query/blogsdata.dart';
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
-import 'dart:convert';
 
 class FullData extends StatelessWidget {
   @override
