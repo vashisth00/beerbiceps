@@ -32,14 +32,14 @@ class FullData extends StatelessWidget {
                     return Image.network(
                         'https://beerbiceps2.adesignguy.co/wp-content/uploads/2020/09/0M-Recovered-1-1.gif');
                   }
-                  return Row(children: [
-                    // Text(mydata),
-                    Column(
-                      children: [Text(result.data['posts'])],
-                    ),
-                    Column(
-                      children: [Text(result.data['posts'])],
-                    )
+                  return ListView(children: [
+                    Row(children: [
+                      // Text(mydata),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: Text(mydata),
+                      ),
+                    ]),
                   ]);
                 })));
   }

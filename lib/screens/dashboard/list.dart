@@ -42,9 +42,11 @@ class ListStyle extends StatelessWidget {
               print("whatttt " +
                   result.data['posts']['nodes'][0]['author']['node']
                       ['firstName']);
+              List repositories = result.data['posts']['nodes'];
               return ListView.builder(
-                  itemCount: result.data['posts']['nodes'].length,
+                  itemCount: repositories.length,
                   itemBuilder: (context, index) {
+                    var data = Node.fromJson(repositories[index]);
                     print("LOL " +
                         result.data['posts']['nodes'][index].toString());
                     return GestureDetector(
