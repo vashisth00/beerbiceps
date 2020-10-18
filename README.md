@@ -10,4 +10,5 @@ Website : https://v3.beerbiceps.com/
 
 Use of BLoC > Providers in this for easier statemanagement and for more users and scalability reasons
 
-
+-> BBlogs Class responsible for Fetching blogs 
+-> Adding JWT Auth for login purpose connecting from wordpress Woo and also enabling user registrations

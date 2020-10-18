@@ -48,6 +48,10 @@ class BlogsGrid extends StatelessWidget {
                       title: 'Coming Soon',
                       route: BlogsGrid(),
                     ),
+                    Boards(
+                      title: 'Coming Soon',
+                      route: BlogsGrid(),
+                    ),
                   ],
                 ),
               ),
