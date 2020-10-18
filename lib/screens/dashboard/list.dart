@@ -1,4 +1,5 @@
 import 'package:beerbiceps/constants/db.dart';
+import 'package:beerbiceps/queries/query/blogsdata.dart';
 import 'package:beerbiceps/screens/dashboard/info.dart';
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
@@ -7,49 +8,6 @@ class BlogList extends StatefulWidget {
   @override
   _BlogListState createState() => _BlogListState();
 }
-
-String withAuthors = '''
-query MyQuery {
-  posts {
-    nodes {
-      authorId
-      title
-      slug
-      author {
-        node {
-          firstName
-        }
-      }
-    }
-  }
-}
-
-''';
-
-String readRepositories = """
-    query MyQuery {
-            posts(last: 30) {
-              edges {
-               node {
-                 title
-                 slug
-                 id
-               }
-              }
-           }
-          }
-""";
-String basicPosts = """
-query Posts {
-  posts {
-    nodes {
-      authorId
-      title
-    }
-  }
-}
-
-""";
 
 class _BlogListState extends State<BlogList> {
   @override
@@ -98,7 +56,6 @@ class ListStyle extends StatelessWidget {
                                   arguments: result.data['posts']['nodes']
                                           [index]
                                       .toString())),
-                          //result.data['posts']['nodes'][index]
                         );
                       },
                       child: Padding(
