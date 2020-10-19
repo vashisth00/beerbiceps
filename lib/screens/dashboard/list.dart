@@ -52,6 +52,7 @@ class ListStyle extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
+                              // ignore: missing_required_param
                               builder: (context) => FullData(),
                               // - Might need this later -
                               settings: RouteSettings(arguments: data)),
